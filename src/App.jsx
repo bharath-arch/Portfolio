@@ -239,7 +239,7 @@ export default function App() {
               id="Projects"
               className={`md:mt-28  md:ml-48 ml-10 mr-5  overflow-y-hidden flex flex-col  `}
             >
-              <p className="text-2xl mt-5 mb-5 md:hidden">Projects</p>
+              <p className="text-2xl mt-10 mb-5 md:hidden">Projects</p>
               <div className="h-auto w-auto text-white ">
                 <div className="md:flex  md:flex-col md:gap-2">
                   <span className="font-bold text-xl">Joke App</span>
