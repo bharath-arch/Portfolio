@@ -6,26 +6,26 @@ import { FaGithub } from "react-icons/fa";
 export default function App() {
   const [link, setLink] = useState("About");
   const handleClick = (e, SectionId) => {
-    
+    setLink(SectionId);
     console.log(link);
 
     const val = e.target.getAttribute("href").toString();
 
     if (val === "#About") {
       e.preventDefault();
-      setLink('About');
+
       window.scrollTo({ top: 0, behavior: "smooth" });
       window.history.pushState({}, "", val); // Update URL with #About
     }
     if (val === "#Experience") {
       e.preventDefault();
-      setLink('Experience');
+
       window.scrollTo({ top: 535, behavior: "smooth" });
       window.history.pushState({}, "", val);
     }
     if (val === "#Projects") {
       e.preventDefault();
-      setLink('Projects');
+
       window.scrollTo({ top: 1680, behavior: "smooth" });
       window.history.pushState({}, "", val);
     }
@@ -46,8 +46,8 @@ export default function App() {
             <div className="flex flex-col mt-24 ml-20  ">
               <a
                 href="#About"
-                className={`p-2 font-bold text-sm text-white ${
-                  link === "About" && "text-[#535bf2;]"
+                className={`p-2 font-bold text-sm ${
+                  link === "About" ? "text-[#535bf2;]" : " text-white"
                 }`}
                 onClick={(e) => handleClick(e, "About")}
               >
@@ -55,8 +55,8 @@ export default function App() {
               </a>
               <a
                 href="#Experience"
-                className={`p-2 font-bold text-sm text-white ${
-                  link === "Experience" && "text-[#535bf2;]"
+                className={`p-2 font-bold text-sm  ${
+                  link === "Experience" ? "text-[#535bf2;]" : "text-white"
                 }`}
                 onClick={(e) => handleClick(e, "Experience")}
               >
@@ -64,8 +64,8 @@ export default function App() {
               </a>
               <a
                 href="#Projects"
-                className={`p-2 font-bold text-sm text-white ${
-                  link === "Projects" && "text-[#535bf2;]"
+                className={`p-2 font-bold text-sm  ${
+                  link === "Projects" ? "text-[#535bf2;]" : "text-white"
                 }`}
                 onClick={(e) => handleClick(e, "Projects")}
               >
@@ -117,7 +117,7 @@ export default function App() {
               id="Experience"
               className={`mt-28  ml-48  overflow-y-hidden flex flex-col flex-1 `}
             >
-              <div className="h-auto w-auto text-white flex gap-5">
+              <div className="h-auto w-auto p-1 rounded-md text-white flex gap-5 ">
                 <div>
                   <p className="w-[7rem]">2024 - Present</p>
                 </div>
