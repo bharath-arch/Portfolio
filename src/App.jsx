@@ -26,7 +26,7 @@ export default function App() {
     if (val === "#Projects") {
       e.preventDefault();
 
-      window.scrollTo({ top: 1680, behavior: "smooth" });
+      window.scrollTo({ top: 1755, behavior: "smooth" });
       window.history.pushState({}, "", val);
     }
   };
@@ -34,16 +34,18 @@ export default function App() {
   return (
     <div className="bg-[#242424;] text-gray-200 font-nunito">
       <AnimatedCursor />
-      <div className="flex ">
-        <div className="flex  h-svh w-[30rem]  ">
-          <div className="fixed">
+      <div className="md:flex ">
+        <div className="md:flex  md:h-svh md:w-[30rem]  ">
+          <div className="md:fixed">
             <div className="mt-28 ml-[3rem] ">
-              <p className="text-5xl font-bold  ">Bharath Kumar M</p>
+              <p className="md:text-5xl text-4xl font-bold  ">
+                Bharath Kumar M
+              </p>
               <p className="text-[20px] mt-3 font-bold ">
                 MERN Stack Developer
               </p>
             </div>
-            <div className="flex flex-col mt-24 ml-20  ">
+            <div className="md:flex flex-col mt-24 ml-20 hidden ">
               <a
                 href="#About"
                 className={`p-2 font-bold text-sm ${
@@ -72,7 +74,7 @@ export default function App() {
                 Projects
               </a>
             </div>
-            <div className="flex gap-2 mt-24 ml-20 items-center">
+            <div className="flex gap-2 md:mt-24 md:ml-20 ml-10 mt-5 items-center">
               <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQF8-HKZnlncbwAAAY9zC3XQfOmUBb5--TIBhvKcrmK_-tZZ3l1zuHl8gtKjtWivHCBvhazAddKSH6HLrP8zvKdIsk0FI3eq1f-JvppKhHnKFQJqSinoFAl_f-UOazoxtfSnE3I=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fbharath-kumar-9b46aa241%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app">
                 <CiLinkedin size={40} />{" "}
               </a>{" "}
@@ -83,10 +85,14 @@ export default function App() {
           </div>
         </div>
         <div
-          className={`mt-28 mr-40 overflow-y-hidden flex flex-col flex-1 mb-20`}
+          className={`md:mt-28 md:mr-40 overflow-y-hidden md:flex md:flex-col md:flex-1 `}
         >
           <div className="flex-1 overflow-y-auto ">
-            <section id="About" className="flex flex-col gap-2 ml-48">
+            <section
+              id="About"
+              className="flex flex-col gap-2 md:ml-48 ml-10 mr-5"
+            >
+              <p className="text-2xl mt-5 mb-5 md:hidden">About</p>
               <p>
                 I'm a dedicated MERN stack developer with a knack for creating
                 user-friendly and scalable web applications. Proficient in
@@ -115,9 +121,10 @@ export default function App() {
 
             <section
               id="Experience"
-              className={`mt-28  ml-48  overflow-y-hidden flex flex-col flex-1 `}
+              className={`md:mt-28 mt-10 ml-10 mr-5 md:ml-48  overflow-y-hidden md:flex md:flex-col md:flex-1 `}
             >
-              <div className="h-auto w-auto p-1 rounded-md text-white flex gap-5 ">
+              <p className="text-2xl mt-5 mb-5 md:hidden">Experience</p>
+              <div className="md:h-auto md:w-auto p-1 rounded-md text-white md:flex md:gap-5 ">
                 <div>
                   <p className="w-[7rem]">2024 - Present</p>
                 </div>
@@ -132,7 +139,7 @@ export default function App() {
                     development using MongoDB and Express.js to enhance the
                     customer experience.
                   </p>
-                  <div className="flex gap-2 text-[12px] mt-3 ">
+                  <div className="flex gap-2  text-[10px]  mt-3 ">
                     <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
                       Java Script
                     </span>
@@ -151,7 +158,7 @@ export default function App() {
                   </div>
                 </div>
               </div>
-              <div className="h-auto w-auto mt-14 text-white flex gap-5">
+              <div className="md:h-auto md:w-auto md:mt-14 mt-10 mr-5 text-white md:flex md:gap-5">
                 <div>
                   <p className="w-[7rem]">2021 - 2022</p>
                 </div>
@@ -170,7 +177,7 @@ export default function App() {
                     documents to Word documents, facilitating ease of editing
                     and processing for enhanced efficiency.
                   </p>
-                  <div className="flex gap-2 text-[12px] mt-3 ">
+                  <div className="flex gap-2 text-[10px]  mt-3 ">
                     <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
                       MS Word
                     </span>
@@ -189,7 +196,7 @@ export default function App() {
                   </div>
                 </div>
               </div>
-              <div className="h-auto w-auto mt-14 text-white flex gap-5">
+              <div className="h-auto w-auto md:mt-14 mt-10 mr-5 text-white md:flex gap-5">
                 <div>
                   <p className="w-[7rem]">2020 - 2020</p>
                 </div>
@@ -208,7 +215,7 @@ export default function App() {
                     libraries into Django projects, enhancing their
                     functionality and capabilities.
                   </p>
-                  <div className="flex gap-2 text-[12px] mt-3 ">
+                  <div className="flex gap-2 text-[10px] mt-3 ">
                     <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
                       Python
                     </span>
@@ -230,10 +237,11 @@ export default function App() {
             </section>
             <section
               id="Projects"
-              className={`mt-28  ml-48  overflow-y-hidden flex flex-col flex-1 `}
+              className={`md:mt-28  md:ml-48 ml-10 mr-5  overflow-y-hidden flex flex-col  `}
             >
+              <p className="text-2xl mt-5 mb-5 md:hidden">Projects</p>
               <div className="h-auto w-auto text-white ">
-                <div className="flex  flex-col gap-2">
+                <div className="md:flex  md:flex-col md:gap-2">
                   <span className="font-bold text-xl">Joke App</span>
                   <p>
                     I designed and developed an engaging web application known
@@ -282,6 +290,18 @@ export default function App() {
                 </p>
               </div>
             </section>
+            <div className={`md:mt-28  md:ml-48 ml-10 mr-5  overflow-y-hidden flex flex-col mb-20  `}>
+            <p style={{opacity: 0.5}}>
+              {" "}
+              Loosely designed in <span className="text-red-500">Figma</span> and coded in <span className="text-red-500">Visual Studio Code</span> by yours
+              truly. Built with <span className="text-red-500">React.js</span> and <span className="text-red-500">Tailwind CSS</span>, deployed with <span className="text-red-500">Vercel</span>.
+            </p>
+            </div>
+           
+            <footer className="bg-gray-800 text-white p-4  mt-10 flex flex-col text-center text-sm md:hidden">
+              Loosely designed in Figma and coded in Visual Studio Code by yours
+              truly. Built with React.js and Tailwind CSS, deployed with Vercel.
+            </footer>
           </div>
         </div>
       </div>
