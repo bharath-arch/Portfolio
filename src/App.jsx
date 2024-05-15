@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
-// https://brittanychiang.com/#about
+
 export default function App() {
+  const [link, setLink] = useState("About");
+  const handleClick = (e, SectionId) => {
+    
+    console.log(link);
+
+    const val = e.target.getAttribute("href").toString();
+
+    if (val === "#About") {
+      e.preventDefault();
+      setLink('About');
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.history.pushState({}, "", val); // Update URL with #About
+    }
+    if (val === "#Experience") {
+      e.preventDefault();
+      setLink('Experience');
+      window.scrollTo({ top: 535, behavior: "smooth" });
+      window.history.pushState({}, "", val);
+    }
+    if (val === "#Projects") {
+      e.preventDefault();
+      setLink('Projects');
+      window.scrollTo({ top: 1680, behavior: "smooth" });
+      window.history.pushState({}, "", val);
+    }
+  };
+
   return (
     <div className="bg-[#242424;] text-gray-200 font-nunito">
       <AnimatedCursor />
@@ -17,13 +44,31 @@ export default function App() {
               </p>
             </div>
             <div className="flex flex-col mt-24 ml-20  ">
-              <a href="#About" className="p-2 font-bold text-sm text-white">
+              <a
+                href="#About"
+                className={`p-2 font-bold text-sm text-white ${
+                  link === "About" && "text-[#535bf2;]"
+                }`}
+                onClick={(e) => handleClick(e, "About")}
+              >
                 About
               </a>
-              <a href="#Experience" className="p-2 font-bold text-sm text-white">
+              <a
+                href="#Experience"
+                className={`p-2 font-bold text-sm text-white ${
+                  link === "Experience" && "text-[#535bf2;]"
+                }`}
+                onClick={(e) => handleClick(e, "Experience")}
+              >
                 Experience
               </a>
-              <a href="#Projects" className="p-2 font-bold text-sm text-white">
+              <a
+                href="#Projects"
+                className={`p-2 font-bold text-sm text-white ${
+                  link === "Projects" && "text-[#535bf2;]"
+                }`}
+                onClick={(e) => handleClick(e, "Projects")}
+              >
                 Projects
               </a>
             </div>
@@ -37,58 +82,205 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="mt-28 mr-32 flex flex-col flex-1 ">
+        <div
+          className={`mt-28 mr-40 overflow-y-hidden flex flex-col flex-1 mb-20`}
+        >
           <div className="flex-1 overflow-y-auto ">
-            <section id="About" className="flex flex-col gap-2">
+            <section id="About" className="flex flex-col gap-2 ml-48">
               <p>
-                As a motivated MERN stack developer, I bring a wealth of
-                experience in crafting user-friendly and scalable web
-                applications. With proficiency in React.js, Node.js, MongoDB,
-                and more, I specialize in delivering robust solutions that meet
-                the dynamic needs of modern businesses.
+                I'm a dedicated MERN stack developer with a knack for creating
+                user-friendly and scalable web applications. Proficient in
+                React.js, Node.js, MongoDB, and more, I excel in designing
+                responsive front-end interfaces and efficient backend systems,
+                including RESTful APIs and MongoDB database management. With
+                sharp problem-solving skills and a keen eye for detail, I thrive
+                on overcoming complex challenges and delivering high-quality
+                solutions.
               </p>
               <p>
-                {" "}
-                On the backend, I am adept at leveraging the power of Node.js to
-                build efficient and performant RESTful APIs. By utilizing
-                Node.js's non-blocking, event-driven architecture, I create
-                backend systems that handle concurrent requests seamlessly,
-                ensuring optimal performance and responsiveness.
+                As a collaborative team player, I'm eager to contribute to the
+                success of growing tech companies. I bring a passion for
+                innovation and a drive for excellence in the digital realm. With
+                my expertise and commitment, I aim to play a key role in driving
+                innovation and success in the tech industry.
               </p>
               <p>
-                In addition, my expertise extends to MongoDB database
-                management. I have a proven track record of designing and
-                optimizing MongoDB databases to store and retrieve data
-                efficiently. Whether it's structuring complex data models or
-                implementing advanced querying and indexing strategies, I ensure
-                that MongoDB databases are well-organized and scalable to
-                support the evolving needs of web applications.
-              </p>
-              <p>
-                On the front-end, I excel in building responsive interfaces
-                using React.js. I leverage React's component-based architecture
-                and state management capabilities to create intuitive user
-                experiences that drive engagement and enhance usability.
-              </p>{" "}
-              <p>
-                What sets me apart is my strong problem-solving skills and keen
-                attention to detail. I thrive on tackling complex challenges
-                head-on, devising innovative solutions, and delivering
-                high-quality results that exceed expectations.
-              </p>{" "}
-              <p>
-                As a collaborative team player, I am eager to contribute to a
-                forward-thinking tech company. I am passionate about driving
-                innovation and fostering a culture of excellence in the digital
-                realm. Together, let's build the future of technology and make a
-                meaningful impact in the world.
+                With a strong foundation in MERN stack development, I'm equipped
+                to tackle diverse projects and drive impactful results. Whether
+                it's crafting intuitive user interfaces or optimizing backend
+                processes, I'm dedicated to delivering solutions that exceed
+                expectations and drive business growth.
               </p>
             </section>
-            <section id="Experience">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, perferendis. Deleniti consectetur quaerat expedita officiis officia natus exercitationem quod nesciunt saepe possimus error architecto, corporis quas. Officiis adipisci animi dolor facere unde corporis. Dolorum nulla similique recusandae ullam fuga possimus in numquam voluptate animi. Veritatis quo soluta id voluptates pariatur, totam modi! Labore laudantium quidem delectus quaerat optio porro commodi officiis omnis explicabo consequuntur modi temporibus sunt architecto non possimus, laboriosam quo alias iste doloribus beatae aliquid. Suscipit saepe adipisci, eius quisquam rerum provident. Accusamus enim iusto provident cum ea quidem at commodi fugiat deserunt, explicabo, deleniti itaque facilis dolore.
+
+            <section
+              id="Experience"
+              className={`mt-28  ml-48  overflow-y-hidden flex flex-col flex-1 `}
+            >
+              <div className="h-auto w-auto text-white flex gap-5">
+                <div>
+                  <p className="w-[7rem]">2024 - Present</p>
+                </div>
+                <div className="">
+                  <h1 className="font-bold">MERN Stack Developer Softronics</h1>
+                  <h3 className="font-semibold">Intern</h3>
+                  <p className="mt-2">
+                    As an intern, I'm fully immersed in developing and
+                    maintaining front-end components for an innovative
+                    investment platform. With expertise in React.js, I craft
+                    captivating interfaces. I'm also involved in backend
+                    development using MongoDB and Express.js to enhance the
+                    customer experience.
+                  </p>
+                  <div className="flex gap-2 text-[12px] mt-3 ">
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Java Script
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Node.js
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Mongoose
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Nodemon
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      MongoDB
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="h-auto w-auto mt-14 text-white flex gap-5">
+                <div>
+                  <p className="w-[7rem]">2021 - 2022</p>
+                </div>
+                <div className="">
+                  <h1 className="font-bold">
+                    Documentation Specialist - Stream Perfect Global Services
+                  </h1>
+                  <h3 className="font-semibold">Documentation Specialist</h3>
+                  <p className="mt-2">
+                    I analyzed and categorized large volumes of documents using
+                    efficient data entry techniques, ensuring accuracy and
+                    adherence to quality standards throughout the document
+                    processing procedures. Additionally, I maintained detailed
+                    records and provided valuable administrative support to the
+                    team. As part of my responsibilities, I also converted PDF
+                    documents to Word documents, facilitating ease of editing
+                    and processing for enhanced efficiency.
+                  </p>
+                  <div className="flex gap-2 text-[12px] mt-3 ">
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      MS Word
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Excel
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Adobe
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Abbyy Finereader
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Skype
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="h-auto w-auto mt-14 text-white flex gap-5">
+                <div>
+                  <p className="w-[7rem]">2020 - 2020</p>
+                </div>
+                <div className="">
+                  <h1 className="font-bold">
+                    Python Junior Developper soften Technology
+                  </h1>
+                  <h3 className="font-bold">Intern</h3>
+                  <p className="mt-2">
+                    I developed web applications utilizing the Django framework,
+                    adhering meticulously to best practices and design patterns
+                    to ensure optimal performance. Security was a top priority,
+                    and I implemented robust authentication and authorization
+                    mechanisms within Django projects to safeguard user data.
+                    Additionally, I seamlessly integrated third-party APIs and
+                    libraries into Django projects, enhancing their
+                    functionality and capabilities.
+                  </p>
+                  <div className="flex gap-2 text-[12px] mt-3 ">
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Python
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Django
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Flask
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      Sql lite
+                    </span>
+                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                      vs code
+                    </span>
+                  </div>
+                </div>
+              </div>
             </section>
-            <section id="Projects">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, reiciendis ut accusantium possimus illo iure saepe neque tenetur ipsam nemo facere necessitatibus voluptates dolore ab esse, provident dignissimos dolor optio voluptatem nobis quam maiores! Enim, porro! Dolorum, hic dolor fugit totam quos rerum omnis, eaque natus voluptatum, soluta aliquid veritatis ab. Pariatur praesentium magnam sint similique repudiandae a quam tempora nisi rerum repellendus recusandae, dicta iusto ullam nulla inventore dolores! Repudiandae assumenda magnam nihil aliquid saepe, earum nisi mollitia! Quisquam repellat exercitationem ab, voluptas, illum vitae, ipsam reiciendis excepturi illo modi aspernatur eum doloribus aperiam animi aliquid repellendus velit eaque! Error mollitia odio quibusdam quod temporibus doloremque fugit culpa neque sapiente doloribus repellat asperiores, voluptatem saepe unde sunt soluta libero eum nesciunt magnam porro voluptates adipisci praesentium quo qui? Similique, assumenda? Neque necessitatibus, voluptatum expedita eum minima vitae ad eveniet ipsum ea, at delectus voluptates molestias labore odio numquam reprehenderit saepe, magni sed? Blanditiis ab qui laboriosam nemo aut, delectus modi labore recusandae, vel asperiores dicta ullam rerum veritatis tenetur et assumenda officiis libero deserunt id nam corrupti magnam architecto itaque. Quaerat eum dicta ea debitis explicabo nihil corrupti recusandae corporis. Temporibus sunt nam nostrum dicta ratione, cupiditate autem laboriosam!
+            <section
+              id="Projects"
+              className={`mt-28  ml-48  overflow-y-hidden flex flex-col flex-1 `}
+            >
+              <div className="h-auto w-auto text-white ">
+                <div className="flex  flex-col gap-2">
+                  <span className="font-bold text-xl">Joke App</span>
+                  <p>
+                    I designed and developed an engaging web application known
+                    as the Joke App. Leveraging React.js, this project fetches
+                    random jokes from an API, presenting them in an interactive
+                    format to amuse users. Through this project, I demonstrate
+                    my expertise in front-end development and API integration,
+                    emphasizing my capability to craft enjoyable and
+                    user-centric experiences.
+                  </p>
+                </div>
+
+                <div
+                  style={{
+                    width: "100%",
+                    height: "300px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <object
+                    type="text/html"
+                    data="https://joke-app-nu.vercel.app/"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      margin: "1%",
+                      overflow: "hidden",
+                    }}
+                  >
+                    Your browser doesn't support embedded content. Please{" "}
+                    <a href="https://joke-app-nu.vercel.app/">click here</a> to
+                    view the content.
+                  </object>
+                </div>
+              </div>
+              <div className="flex  flex-col gap-2 mt-5">
+                <span className="font-bold text-xl">Fund Raiser Akron</span>
+                <p>
+                  I developed a comprehensive web platform using React.js,
+                  Node.js, Mongoose, and Nodemon, designed to connect business
+                  owners, startup founders, and investors. This platform
+                  streamlines fundraising efforts by offering a user-friendly
+                  interface for showcasing business ideas, managing investor
+                  relations, and facilitating the fundraising process
+                  efficiently.
+                </p>
+              </div>
             </section>
           </div>
         </div>
