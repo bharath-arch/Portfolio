@@ -290,7 +290,7 @@ export default function App() {
                 </p>
               </div>
             </section>
-            <div className={`md:mt-28  md:ml-48 ml-10 mr-5  overflow-y-hidden flex flex-col mb-20  `}>
+            <div className={`md:mt-28  md:ml-48 ml-10 mr-5  overflow-y-hidden md:flex flex-col mb-20 hidden  `}>
             <p style={{opacity: 0.5}}>
               {" "}
               Loosely designed in <span className="text-red-500">Figma</span> and coded in <span className="text-red-500">Visual Studio Code</span> by yours
