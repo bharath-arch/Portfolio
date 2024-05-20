@@ -49,13 +49,13 @@ export default function App() {
       <div className="bg-[#242424;] text-gray-200 font-nunito">
         <AnimatedCursor />
         <div className="md:flex">
-          <div className="md:flex md:flex-1 md:sticky md:h-dvh overflow-auto top-0 " >
+          <div className="top-0 overflow-auto md:flex md:flex-1 md:sticky md:h-dvh " >
             <div className="">
-              <div className="mt-28 ml-[3rem] ">
-                <p className="md:text-5xl text-4xl font-bold ">Bharath Kumar M</p>
+              <div className="md:mt-28 md:ml-[3rem] mt-16 ml-10">
+                <p className="text-4xl font-bold md:text-5xl ">Bharath Kumar M</p>
                 <p className="text-[20px] mt-3 font-bold ">MERN Stack Developer</p>
               </div>
-              <div className="md:flex flex-col mt-24 ml-20 hidden">
+              <div className="flex-col hidden mt-24 ml-20 md:flex">
                 <a
                     href="#About"
                     className={`p-2 font-bold text-sm ${
@@ -86,7 +86,7 @@ export default function App() {
                   Projects
                 </a>
               </div>
-              <div className="flex gap-2 md:mt-24 md:ml-20 ml-10 mt-5 items-center">
+              <div className="flex items-center gap-2 mt-5 ml-10 md:mt-24 md:ml-20">
                 <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQF8-HKZnlncbwAAAY9zC3XQfOmUBb5--TIBhvKcrmK_-tZZ3l1zuHl8gtKjtWivHCBvhazAddKSH6HLrP8zvKdIsk0FI3eq1f-JvppKhHnKFQJqSinoFAl_f-UOazoxtfSnE3I=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fbharath-kumar-9b46aa241%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app">
                   <CiLinkedin size={40}/>{" "}
                 </a>{" "}
@@ -97,15 +97,15 @@ export default function App() {
             </div>
           </div>
           <div
-              className={`md:mt-28  overflow-y-hidden md:flex md:flex-col md:flex-1`}
+              className={`md:mt-28 ml-5 mr-5  overflow-y-hidden md:flex md:flex-col md:flex-1`}
           >
             <div className="flex-1 overflow-y-auto ">
               <section
                   id="About"
-                  className="flex flex-col gap-2 md:mr-16  "
+                  className="flex flex-col gap-2 md:mr-16 "
                   ref={aboutRef}
               >
-                <p className="text-2xl mt-5 mb-5 md:hidden">About</p>
+                <p className="mt-5 mb-5 text-2xl md:hidden">About</p>
                 <p>
                   I'm a dedicated MERN stack developer with a knack for creating
                   user-friendly and scalable web applications. Proficient in
@@ -137,8 +137,8 @@ export default function App() {
                   className={`md:mt-28 mt-10  md:mr-16  overflow-y-hidden md:flex md:flex-col md:flex-1`}
                   ref={experienceRef}
               >
-                <p className="text-2xl mt-5 mb-5 md:hidden">Experience</p>
-                <div className="md:h-auto md:w-auto p-1 rounded-md text-white md:flex  ">
+                <p className="mt-5 mb-5 text-2xl md:hidden">Experience</p>
+                <div className="p-1 text-white rounded-md md:h-auto md:w-auto md:flex ">
                   <div>
                     <p className="w-[7rem]">2024 - Present</p>
                   </div>
@@ -172,7 +172,7 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-                <div className="md:h-auto md:w-auto md:mt-14 mt-10 mr-5 text-white md:flex ">
+                <div className="mt-10 mr-5 text-white md:h-auto md:w-auto md:mt-14 md:flex ">
                   <div>
                     <p className="w-[7rem]">2021 - 2022</p>
                   </div>
@@ -210,7 +210,7 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-                <div className="h-auto w-auto  mt-10   text-white md:flex ">
+                <div className="w-auto h-auto mt-10 text-white md:flex ">
                   <div>
                     <p className="w-[7rem]">2020 - 2020</p>
                   </div>
@@ -255,10 +255,10 @@ export default function App() {
                   className={`md:mt-28 md:mr-16  overflow-y-hidden flex flex-col`}
                   ref={projectsRef}
               >
-                <p className="text-2xl mt-10 mb-5 md:hidden">Projects</p>
-                <div className="h-auto w-auto text-white ">
-                  <div className="md:flex  md:flex-col md:gap-2">
-                    <span className="font-bold text-xl">Joke App</span>
+                <p className="mt-10 mb-5 text-2xl md:hidden">Projects</p>
+                <div className="w-auto h-auto text-white ">
+                  <div className="md:flex md:flex-col md:gap-2">
+                    <span className="text-xl font-bold">Joke App</span>
                     <p>
                       I designed and developed an engaging web application known
                       as the Joke App. Leveraging React.js, this project fetches
@@ -293,8 +293,8 @@ export default function App() {
                     </object>
                   </div>
                 </div>
-                <div className="flex  flex-col gap-2 mt-5">
-                  <span className="font-bold text-xl">Fund Raiser Akron</span>
+                <div className="flex flex-col gap-2 mt-5">
+                  <span className="text-xl font-bold">Fund Raiser Akron</span>
                   <p>
                     I developed a comprehensive web platform using React.js,
                     Node.js, Mongoose, and Nodemon, designed to connect business
@@ -315,7 +315,7 @@ export default function App() {
                 </p>
               </div>
 
-              <footer className="bg-gray-800 text-white p-4 mt-10 flex flex-col text-center text-sm md:hidden">
+              <footer className="flex flex-col p-4 mt-10 text-sm text-center text-white bg-gray-800 md:hidden">
                 Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with React.js and Tailwind CSS, deployed with Vercel.
               </footer>
             </div>
