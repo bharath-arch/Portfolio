@@ -104,7 +104,7 @@ export default function App() {
         <div
           className={`md:mt-28 ml-5 mr-5  overflow-y-hidden md:flex md:flex-col md:flex-1`}
         >
-          <div className="flex-1 overflow-y-auto ">
+          <div className="flex-1 ">
             <section
               id="About"
               className="flex flex-col gap-2 md:mr-16 "
@@ -139,7 +139,7 @@ export default function App() {
 
             <section
               id="Experience"
-              className={`md:mt-28 mt-10  md:mr-16  overflow-y-hidden md:flex md:flex-col md:flex-1`}
+              className={`md:mt-28 mt-10  md:mr-16   md:flex md:flex-col md:flex-1`}
               ref={experienceRef}
             >
               <p className="mt-5 mb-5 text-2xl md:hidden">Experience</p>
