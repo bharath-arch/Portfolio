@@ -158,8 +158,8 @@ export default function App() {
                     development using MongoDB and Express.js to enhance the
                     customer experience.
                   </p>
-                  <div className="flex gap-2  text-[10px]  mt-3 ">
-                    <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
+                  <div className="flex gap-2  md:text-[10px] text-[8px]   mt-3 ">
+                    <span className="p-2 bg-[#8dc4902f] rounded-full  hover:text-green-300">
                       Java Script
                     </span>
                     <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
@@ -196,7 +196,7 @@ export default function App() {
                     documents to Word documents, facilitating ease of editing
                     and processing for enhanced efficiency.
                   </p>
-                  <div className="flex gap-2 text-[10px]  mt-3 ">
+                  <div className="flex gap-2 md:text-[10px] text-[8px] mt-3 ">
                     <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
                       MS Word
                     </span>
@@ -234,7 +234,7 @@ export default function App() {
                     libraries into Django projects, enhancing their
                     functionality and capabilities.
                   </p>
-                  <div className="flex gap-2 text-[10px] mt-3 ">
+                  <div className="flex gap-2 md:text-[10px] text-[8px] mt-3 ">
                     <span className="p-2 bg-[#8dc4902f] rounded-full hover:text-green-300">
                       Python
                     </span>
