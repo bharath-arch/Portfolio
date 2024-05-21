@@ -143,7 +143,7 @@ export default function App() {
               ref={experienceRef}
             >
               <p className="mt-5 mb-5 text-2xl md:hidden">Experience</p>
-              <div className="p-1 text-white rounded-md md:h-auto md:w-auto md:flex ">
+              <div className="p-1 text-white rounded-md md:h-auto md:w-auto md:flex md:gap-3 ">
                 <div>
                   <p className="w-[7rem]">2024 - Present</p>
                 </div>
@@ -177,7 +177,7 @@ export default function App() {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 mr-5 text-white md:h-auto md:w-auto md:mt-14 md:flex ">
+              <div className="mt-10 mr-5 text-white md:h-auto md:w-auto md:mt-14 md:flex md:gap-3">
                 <div>
                   <p className="w-[7rem]">2021 - 2022</p>
                 </div>
@@ -215,7 +215,7 @@ export default function App() {
                   </div>
                 </div>
               </div>
-              <div className="w-auto h-auto mt-10 text-white md:flex ">
+              <div className="w-auto h-auto mt-10 text-white md:flex md:gap-3">
                 <div>
                   <p className="w-[7rem]">2020 - 2020</p>
                 </div>
@@ -307,7 +307,7 @@ export default function App() {
                   streamlines fundraising efforts by offering a user-friendly
                   interface for showcasing business ideas, managing investor
                   relations, and facilitating the fundraising process
-                  efficiently.
+                  efficiently. ( In development Stage )
                 </p>
               </div>
             </section>
