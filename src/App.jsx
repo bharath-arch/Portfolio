@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
-
+import { Analytics } from "@vercel/analytics/react"
 export default function App() {
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
@@ -47,6 +47,7 @@ export default function App() {
   return (
     <div className="bg-[#242424;] text-gray-200 font-nunito">
       <AnimatedCursor />
+      <Analytics />
       <div className="md:flex">
         <div className="top-0 overflow-auto md:flex md:flex-1 md:sticky md:h-dvh ">
           <div className="">
