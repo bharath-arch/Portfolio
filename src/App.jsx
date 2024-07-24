@@ -60,9 +60,8 @@ export default function App() {
             <div className="flex-col hidden mt-24 ml-20 md:flex">
               <a
                 href="#About"
-                className={`p-2 font-bold text-sm ${
-                  link === "About" ? "text-[#535bf2;]" : " text-white"
-                }`}
+                className={`p-2 font-bold text-sm ${link === "About" ? "text-[#535bf2;]" : " text-white"
+                  }`}
                 onClick={(e) =>
                   handleClick(e, "About", aboutRef.current.offsetTop)
                 }
@@ -71,9 +70,8 @@ export default function App() {
               </a>
               <a
                 href="#Experience"
-                className={`p-2 font-bold text-sm  ${
-                  link === "Experience" ? "text-[#535bf2;]" : "text-white"
-                }`}
+                className={`p-2 font-bold text-sm  ${link === "Experience" ? "text-[#535bf2;]" : "text-white"
+                  }`}
                 onClick={(e) =>
                   handleClick(e, "Experience", experienceRef.current.offsetTop)
                 }
@@ -82,9 +80,8 @@ export default function App() {
               </a>
               <a
                 href="#Projects"
-                className={`p-2 font-bold text-sm  ${
-                  link === "Projects" ? "text-[#535bf2;]" : "text-white"
-                }`}
+                className={`p-2 font-bold text-sm  ${link === "Projects" ? "text-[#535bf2;]" : "text-white"
+                  }`}
                 onClick={(e) =>
                   handleClick(e, "Projects", projectsRef.current.offsetTop)
                 }
@@ -308,7 +305,7 @@ export default function App() {
                   streamlines fundraising efforts by offering a user-friendly
                   interface for showcasing business ideas, managing investor
                   relations, and facilitating the fundraising process
-                  efficiently. ( In development Stage )
+                  efficiently. ("Please access this website using a computer for optimal viewing experience.")
                 </p>
               </div>
             </section>
@@ -328,6 +325,28 @@ export default function App() {
                 <span className="text-red-500">Tailwind CSS</span>, deployed
                 with <span className="text-red-500">Vercel</span>.
               </p>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                height: "300px",
+                overflow: "hidden",
+              }}
+            >
+              <object
+                type="text/html"
+                data="https://akron-zeta.vercel.app/"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  margin: "1%",
+                  overflow: "hidden",
+                }}
+              >
+                Your browser doesn't support embedded content. Please{" "}
+                <a href="https://akron-zeta.vercel.app/">click here</a> to
+                view the content.
+              </object>
             </div>
           </div>
 
