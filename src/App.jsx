@@ -307,7 +307,7 @@ export default function App() {
                   relations, and facilitating the fundraising process
                   efficiently. ("Please access this website using a computer for optimal viewing experience.")
                 </p>
-                  <a href="https://akron-zeta.vercel.app/">Click Me to View</a>
+                  <a href="https://akron-zeta.vercel.app/" className="text-blue-700 underline">Click Me to View</a>
               </div>
               <div className="mt-4"
               style={{
