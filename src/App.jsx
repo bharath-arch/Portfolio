@@ -308,25 +308,7 @@ export default function App() {
                   efficiently. ("Please access this website using a computer for optimal viewing experience.")
                 </p>
               </div>
-            </section>
-
-            <div
-              className={`md:mt-28 overflow-y-hidden md:flex flex-col mb-20 hidden`}
-            >
-              <p style={{ opacity: 0.5 }}>
-                {" "}
-                Loosely designed in <span className="text-red-500">
-                  Figma
-                </span>{" "}
-                and coded in{" "}
-                <span className="text-red-500">Visual Studio Code</span> by
-                yours truly. Built with{" "}
-                <span className="text-red-500">React.js</span> and{" "}
-                <span className="text-red-500">Tailwind CSS</span>, deployed
-                with <span className="text-red-500">Vercel</span>.
-              </p>
-            </div>
-            <div
+              <div
               style={{
                 width: "100%",
                 height: "300px",
@@ -348,6 +330,26 @@ export default function App() {
                 view the content.
               </object>
             </div>
+            </section>
+
+            <div
+              className={`md:mt-28 overflow-y-hidden md:flex flex-col mb-20 hidden`}
+            >
+              <p style={{ opacity: 0.5 }}>
+                {" "}
+                Loosely designed in <span className="text-red-500">
+                  Figma
+                </span>{" "}
+                and coded in{" "}
+                <span className="text-red-500">Visual Studio Code</span> by
+                yours truly. Built with{" "}
+                <span className="text-red-500">React.js</span> and{" "}
+                <span className="text-red-500">Tailwind CSS</span>, deployed
+                with <span className="text-red-500">Vercel</span>.
+              </p>
+
+            </div>
+            
           </div>
 
         </div>
