@@ -3,6 +3,7 @@ import AnimatedCursor from "react-animated-cursor";
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { Analytics } from "@vercel/analytics/react"
+import TypewriterComponent from "typewriter-effect";
 export default function App() {
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
@@ -54,7 +55,22 @@ export default function App() {
             <div className="md:mt-28 md:ml-[3rem] mt-16 ml-10">
               <p className="text-4xl font-bold md:text-5xl ">Bharath Kumar M</p>
               <p className="text-[20px] mt-3 font-bold ">
-                MERN Stack Developer
+              <TypewriterComponent
+                  options={{
+                    strings: ['MERN Stack Developer', 'FULL stack Developer'],
+                    autoStart: true,
+                    loop: false,
+                    delay: 100, // Speed of typing
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString('MERN Stack Developer')
+                      .pauseFor(1000)
+                      // .typeString('FULL Stack Developer')
+                      .callFunction(() => setIsTypingFinished(true))
+                      .start();
+                  }}
+                />
               </p>
             </div>
             <div className="flex-col hidden mt-24 ml-20 md:flex">
