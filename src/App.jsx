@@ -172,7 +172,7 @@ export default function App() {
             </section>
             <section className="logos mt-20 p-2 gap-4 items-center border w-auto h-auto">
               <p className="mt-5 mb-5 text-2xl md:hidden">Skills</p>
-              <div className="flex">
+              <div className="flex p-2 gap-3">
                 <div className="logo hiddens w-20 h-20">
                   <img src={javaScriptImg} alt="JavaScript" />
                 </div>
@@ -203,7 +203,7 @@ export default function App() {
               <p className="mt-5 mb-5 text-2xl md:hidden">Experience</p>
               <div className="p-1 text-white rounded-md md:h-auto md:w-auto md:flex md:gap-3 ">
                 <div>
-                  <p className="w-[7rem]">2024 - Present</p>
+                  <p className="w-[7rem] select-class">2024 - Present</p>
                 </div>
                 <div
                   // className={`fade-in ${hasFadedIn ? 'visible' : ''}`} >
@@ -239,7 +239,7 @@ export default function App() {
               </div>
               <div className="mt-10 mr-5 text-white md:h-auto md:w-auto md:mt-14 md:flex md:gap-3">
                 <div>
-                  <p className="w-[7rem]">2021 - 2022</p>
+                  <p className="w-[7rem] select-class">2021 - 2022</p>
                 </div>
                 <div
                   // className={`fade-in ${hasFadedIn1 ? 'visible ' : ''}`}
@@ -279,7 +279,7 @@ export default function App() {
               </div>
               <div className="w-auto h-auto mt-10 text-white md:flex md:gap-3">
                 <div>
-                  <p className="w-[7rem]">2020 - 2020</p>
+                  <p className="w-[7rem] select-class">2020 - 2020</p>
                 </div>
                 <div
                   // className={`fade-in ${hasFadedIn1 ? 'visible ' : ''}`}> 
