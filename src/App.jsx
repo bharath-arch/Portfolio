@@ -4,11 +4,31 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { Analytics } from "@vercel/analytics/react"
 import TypewriterComponent from "typewriter-effect";
+import { observeElements } from './Js files/InterSection.js'
+import "./FadeInOnScroll.css"
+import javaScriptImg from '../src/assets/JavaScript-removebg-preview.png'
+import css from '../src/assets/css.png'
+import tailwind from '../src/assets/tailwind-removebg-preview.png'
+
+import redux from '../src/assets/redux-removebg-preview.png'
+import ReactIMG from '../src/assets/React-removebg-preview.png'
+import htmlimg from '../src/assets/html-removebg-preview.png'
+import python from '../src/assets/python-removebg-preview.png'
+import nodeIMG from '../src/assets/node-removebg-preview.png'
+
+
 export default function App() {
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const [link, setLink] = useState("About");
+
+  useEffect(() => {
+
+    observeElements('.select-class');
+  }, []);
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +75,7 @@ export default function App() {
             <div className="md:mt-28 md:ml-[3rem] mt-16 ml-10">
               <p className="text-4xl font-bold md:text-5xl ">Bharath Kumar M</p>
               <p className="text-[20px] mt-3 font-bold ">
-              <TypewriterComponent
+                <TypewriterComponent
                   options={{
                     strings: ['MERN Stack Developer', 'FULL stack Developer'],
                     autoStart: true,
@@ -125,7 +145,7 @@ export default function App() {
               ref={aboutRef}
             >
               <p className="mt-5 mb-5 text-2xl md:hidden">About</p>
-              <p>
+              <p >
                 I'm a dedicated MERN stack developer with a knack for creating
                 user-friendly and scalable web applications. Proficient in
                 React.js, Node.js, MongoDB, and more, I excel in designing
@@ -150,7 +170,31 @@ export default function App() {
                 expectations and drive business growth.
               </p>
             </section>
-
+            <section className="logos mt-20 p-2 gap-4 items-center border w-auto h-auto">
+              <p className="mt-5 mb-5 text-2xl md:hidden">Skills</p>
+              <div className="flex">
+                <div className="logo hiddens w-20 h-20">
+                  <img src={javaScriptImg} alt="JavaScript" />
+                </div>
+                <div className="logo hiddens  w-20 h-20">
+                  <img src={css} alt="JavaScript" />
+                </div>
+                <div className="logo hiddens  w-20 h-20">
+                  <img src={nodeIMG} alt="JavaScript" />
+                </div>
+                <div className="logo hiddens w-20 h-20">
+                  <img src={python} alt="JavaScript" />
+                </div>
+                <div className="logo hiddens w-20 h-20">
+                  <img src={htmlimg} alt="htmlimg" />
+                </div>
+                <div className="logo hiddens w-20 h-20">
+                  <img src={ReactIMG} alt="ReactIMG" />
+                </div>
+                <div className="logo hiddens w-20 h-20">
+                  <img src={redux} alt="redux" />
+                </div></div>
+            </section>
             <section
               id="Experience"
               className={`md:mt-28 mt-10  md:mr-16   md:flex md:flex-col md:flex-1`}
@@ -161,7 +205,9 @@ export default function App() {
                 <div>
                   <p className="w-[7rem]">2024 - Present</p>
                 </div>
-                <div className="">
+                <div
+                  // className={`fade-in ${hasFadedIn ? 'visible' : ''}`} >
+                  className="select-class" >
                   <h1 className="font-bold">MERN Stack Developer Softronics</h1>
                   <h3 className="font-semibold">Intern</h3>
                   <p className="mt-2">
@@ -195,7 +241,9 @@ export default function App() {
                 <div>
                   <p className="w-[7rem]">2021 - 2022</p>
                 </div>
-                <div className="">
+                <div
+                  // className={`fade-in ${hasFadedIn1 ? 'visible ' : ''}`}
+                  className="select-class" >
                   <h1 className="font-bold">
                     Documentation Specialist - Stream Perfect Global Services
                   </h1>
@@ -233,7 +281,9 @@ export default function App() {
                 <div>
                   <p className="w-[7rem]">2020 - 2020</p>
                 </div>
-                <div className="">
+                <div
+                  // className={`fade-in ${hasFadedIn1 ? 'visible ' : ''}`}> 
+                  className="select-class" >
                   <h1 className="font-bold">
                     Python Junior Developper soften Technology
                   </h1>
@@ -323,31 +373,31 @@ export default function App() {
                   relations, and facilitating the fundraising process
                   efficiently. ("Please access this website using a computer for optimal viewing experience.")
                 </p>
-                  <a href="https://akron-zeta.vercel.app/" className="text-blue-700 underline">Click Me to View</a>
+                <a href="https://akron-zeta.vercel.app/" className="text-blue-700 underline">Click Me to View</a>
               </div>
               <div className="mt-4"
-              style={{
-                width: "100%",
-                height: "300px",
-                overflow: "hidden",
-                
-              }}
-            >
-              <object
-                type="text/html"
-                data="https://akron-zeta.vercel.app/"
                 style={{
                   width: "100%",
-                  height: "100%",
-                  margin: "1%",
+                  height: "300px",
                   overflow: "hidden",
+
                 }}
               >
-                Your browser doesn't support embedded content. Please{" "}
-                <a href="https://akron-zeta.vercel.app/">click here</a> to
-                view the content.
-              </object>
-            </div>
+                <object
+                  type="text/html"
+                  data="https://akron-zeta.vercel.app/"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    margin: "1%",
+                    overflow: "hidden",
+                  }}
+                >
+                  Your browser doesn't support embedded content. Please{" "}
+                  <a href="https://akron-zeta.vercel.app/">click here</a> to
+                  view the content.
+                </object>
+              </div>
             </section>
 
             <div
@@ -367,7 +417,7 @@ export default function App() {
               </p>
 
             </div>
-            
+
           </div>
 
         </div>
