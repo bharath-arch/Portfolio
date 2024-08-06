@@ -74,10 +74,10 @@ export default function App() {
           <div className="">
             <div className="md:mt-28 md:ml-[3rem] mt-16 ml-10">
               <p className="text-4xl font-bold md:text-5xl ">Bharath Kumar M</p>
-              <p className="text-[20px] mt-3 font-bold ">
+              <p className="text-[20px] mt-3 font-bold uppercase">
                 <TypewriterComponent
                   options={{
-                    strings: ['MERN Stack Developer', 'FULL stack Developer'],
+                    strings: ['FULL stack Developer'],
                     autoStart: true,
                     loop: false,
                     delay: 100, // Speed of typing
