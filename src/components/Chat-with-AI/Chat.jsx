@@ -8,6 +8,7 @@ import {
   HarmBlockThreshold,
 } from "@google/generative-ai";
 function Chat() {
+  
   const [chat, setChat] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -15,7 +16,6 @@ function Chat() {
   const genAI = new GoogleGenerativeAI(
     "AIzaSyBUTweNdDWD6SPI2VOUBS0fkm0y7de6lFY"
   );
-
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
     systemInstruction: `[
@@ -186,7 +186,7 @@ function Chat() {
                     <span className="text-red-300">{msg.name}</span>:{" "}
                     {msg.message}
                   </p>
-                  <div ref={messageEndRef}></div>
+                  <span ref={messageEndRef}></span>
                 </div>
               ))}
             </div>

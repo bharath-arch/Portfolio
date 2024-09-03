@@ -118,7 +118,7 @@ export default function App() {
                 <FaGithub size={33} />
               </a>
             </div>
-            <div className="absolute bottom-2">
+            <div className="absolute bottom-2 hidden md:block">
               <Chat />
             </div>
           </div>
