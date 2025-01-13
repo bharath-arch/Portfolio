@@ -37,11 +37,7 @@ function Projects() {
         >
           <object
             type="text/html"
-<<<<<<< HEAD
             data="https://reverbian.com/"
-=======
-            data="https://joke-app-nu.vercel.app/"
->>>>>>> b16edb5bd2dfad2501509d6fceee371c16f0642a
             style={{
               width: "100%",
               height: "100%",
