@@ -144,9 +144,9 @@ export default function App() {
               to tackle diverse projects...
             </p>
           </section>
-          <section className="logos mt-20 p-2 gap-4 items-center border w-auto h-auto">
+          <section className="logos mt-20 p-2 gap-3 items-center border max-w-[800px] h-auto">
             <p className="mt-5 mb-5 text-2xl md:hidden">Skills</p>
-            <div className="flex p-2 gap-3">
+            <div className="flex p-2 gap-[8%] items-center">
               {[
                 { src: javaScriptImg, alt: "JavaScript" },
                 { src: css, alt: "CSS" },
@@ -156,7 +156,7 @@ export default function App() {
                 { src: ReactIMG, alt: "React" },
                 { src: redux, alt: "Redux" },
               ].map((logo, index) => (
-                <div key={index} className="logo hiddens w-20 h-20 ">
+                <div key={index} className="logo hiddens w-auto h-auto ">
                   <img src={logo.src} alt={logo.alt} />
                 </div>
               ))}

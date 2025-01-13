@@ -119,7 +119,7 @@ function Experience() {
   }, []);
 
   return (
-    <div className="px-4">
+    <div className="px-4 py-8">
       {experiences.map((exp, index) => (
         <div
           key={index}
