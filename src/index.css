@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 20px;
+  margin: 0;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #2e2d2d;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+a:hover {
+  color: #08d613ce;
+}
+
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+
