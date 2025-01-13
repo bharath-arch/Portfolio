@@ -3,7 +3,7 @@ import React from "react";
 function Projects() {
   return (
     <>
-      <p className=" mb-5 mt-10 md:mt-0 text-2xl md:hidden">Projects</p>
+      <p className=" mb-5 mt-10 md:mt-0 text-2xl ">Projects</p>
       <div className="w-auto h-auto text-white ">
         {/* <div className="md:flex md:flex-col md:gap-2">
           <span className="text-xl font-bold">Spark</span>
