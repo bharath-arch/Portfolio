@@ -8,8 +8,8 @@ function Experience() {
   const experiences = [
     {
       period: "2024 - Present",
-      role: "Software engineer",
-      type: "",
+      role: "Six30labs Pvt Ltd",
+      type: "SDE - 1",
       description:
         "I develop and maintain responsive front-end components using React.js for diverse clients. I actively contribute to real-world projects, addressing and overcoming challenges while adhering to best development practices. My role involves collaborating with senior developers on project design and code reviews, ensuring that our work aligns with both project objectives and industry standards.",
       skills: [
@@ -21,19 +21,26 @@ function Experience() {
         "Mongoose",
         "Nodemon",
         "MongoDB",
+        "React Native",
+        "Expo",
+        "React.js",
+        "Tailwind CSS",
+        "MySQL",
+        "Vitest",
+        "Ant Design",
       ],
     },
     {
       period: "2024 - 2024",
-      role: "MERN Stack Developer Softronics",
-      type: "Intern",
+      role: "Softronics",
+      type: "MERN STACK Developer Intern",
       description:
         "As an intern, I'm fully immersed in developing and maintaining front-end components for an innovative investment platform. With expertise in React.js, I craft captivating interfaces. I'm also involved in backend development using MongoDB and Express.js to enhance the customer experience.",
-      skills: ["Java Script", "Node.js", "Mongoose", "Nodemon", "MongoDB"],
+      skills: ["Java Script", "Node.js", "Mongoose", "Nodemon", "MongoDB","React.js",],
     },
     {
       period: "2021 - 2022",
-      role: "Documentation Specialist - Stream Perfect Global Services",
+      role: "Stream Perfect Global Services",
       type: "Documentation Specialist",
       description:
         "I analyzed and categorized large volumes of documents using efficient data entry techniques, ensuring accuracy and adherence to quality standards throughout the document processing procedures. Additionally, I maintained detailed records and provided valuable administrative support to the team. As part of my responsibilities, I also converted PDF documents to Word documents, facilitating ease of editing and processing for enhanced efficiency.",
@@ -41,8 +48,8 @@ function Experience() {
     },
     {
       period: "2020 - 2020",
-      role: "Python Junior Developer at Soften Technology",
-      type: "",
+      role: "Soften Technology",
+      type: "Python Junior Developer",
       description:
         "I developed web applications utilizing the Django framework, adhering meticulously to best practices and design patterns to ensure optimal performance. Security was a top priority, and I implemented robust authentication and authorization mechanisms within Django projects to safeguard user data. Additionally, I seamlessly integrated third-party APIs and libraries into Django projects, enhancing their functionality and capabilities.",
       skills: ["Python", "Django", "Flask", "Sql lite", "vs code"],
